@@ -54,28 +54,28 @@ console.log(listofdatas);
 
   return (
     <>
-      <h1>Welcome to breaking bad</h1>
+      <h1 className="text-center">Welcome to breaking bad</h1>
    
-      <div style={{textAlign:'center'}}>
-        <span>
+      <div className="text-center">
+        <span className="col-sm-3 col-md-3">
            <input type="text" placeholder="Search by name" onChange={(event)=>setSearch(event.target.value)}></input>
     </span>
-    <span>
+    <span  className="col-sm-3 col-md-3">
     <button type="button" className="btn btn-success" onClick={search}>Search</button>
    
     </span>
-&nbsp;
-    <span>
+<br></br><br></br>
+    <span className="col-sm-3 col-md-3">
            <input type="text" placeholder="Search by category" onChange={(event)=>setSearch(event.target.value)}></input>
     </span>
-    <span>
+    <span  className="col-sm-3 col-md-3">
     <button type="button" className="btn btn-success" onClick={searchcategory}>Search by category</button>
    
     </span>
       </div>
      
       <br></br>
-    <table border="1">
+    <table className="table table-bordered ">
         <tr>
            <td>Name</td>
            <td>Occupation</td>

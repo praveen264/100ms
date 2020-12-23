@@ -1,0 +1,11 @@
+table
+{
+    background-color: antiquewhite;
+    height: auto;
+}
+.breakinbad
+{
+    background-color: rgb(151, 75, 75);
+    height: auto;
+    max-height:fit-content;
+}

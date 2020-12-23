@@ -2,7 +2,7 @@ import Axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Quotes from './Quotes';
-
+import './Detailsbreakingbad.css';
 const Detailsbreakingbad = () => {
     const {id}=useParams();
     const [listofdatas, listofdata] = useState([]);
@@ -22,18 +22,18 @@ const Detailsbreakingbad = () => {
     console.log(listofdatas)
     console.log(listofquotes);
   return (
-    <>
+    <div className="breakinbad">
 
       <h1>Details of Characters</h1>
-      <Link to='/itunes' className="btn btn-primary" >Back</Link>
+      <Link to='/itunes' className="btn btn-primary " ><i className="fa fa-caret-square-o-left"></i>Back</Link>
   
      <div>
    {
        listofdatas.map((item)=>{
            return <>
-           <table border="1" >
+           <table className="table-bordered col-sm-6 mx-auto" >
             <tr><td>Name: </td><td>{item.name}</td></tr>
-          <tr><td>Profile Picture: </td><td><img src={item.img} style={{height: 100, width: 100}} /></td></tr>
+          <tr><td>Profile Picture: </td><td><img src={item.img} className="img-rounded" style={{height: 100, width: 100}} /></td></tr>
         <tr><td>Date of birth</td><td>{item.birthday}</td></tr>
         <tr><td>Occupation</td><td>{item.occupation}</td></tr>
         <tr><td>Status</td><td>{item.status}</td></tr>
@@ -51,7 +51,7 @@ const Detailsbreakingbad = () => {
        })
    }
    </div>
-   </>
+   </div>
   )
 }
 
